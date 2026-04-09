@@ -8,15 +8,18 @@ public_folder: "/Images"
 collections:
   - name: "settings"
     label: "Site Settings"
+    fields:
+      - { label: "Dummy", name: "dummy", widget: "hidden", default: "dummy"}
     files:
       - name: "events"
         label: "Events"
         file: "events.json"
+        format: "json"
         description: "Manage your events here"
         fields:
           - name: events
-            label: Events List
-            widget: list
+            label: "Events List"
+            widget: "list"
             fields:
               - {label: "Event Title", name: "title", widget: "string"}
               - {label: "Day (e.g. 15)", name: "day", widget: "string"}
