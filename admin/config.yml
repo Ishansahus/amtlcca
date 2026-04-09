@@ -8,8 +8,6 @@ public_folder: "/Images"
 collections:
   - name: "settings"
     label: "Site Settings"
-    fields:
-      - { label: "Dummy", name: "dummy", widget: "hidden", default: "dummy"}
     files:
       - name: "events"
         label: "Events"
