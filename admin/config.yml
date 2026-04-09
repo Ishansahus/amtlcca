@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+media_folder: "Images"
+public_folder: "/Images"
+
+collections:
+  - name: "events"
+    label: "Events"
+    file: "events.json"
+    description: "Manage your events here"
+    fields:
+      - name: events
+        label: Events List
+        widget: list
+        fields:
+          - {label: "Event Title", name: "title", widget: "string"}
+          - {label: "Day (e.g. 15)", name: "day", widget: "string"}
+          - {label: "Month & Year (e.g. अप्रैल 2025)", name: "month", widget: "string"}
+          - {label: "Type of Event (e.g. वार्षिक आयोजन)", name: "type", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Location", name: "location", widget: "string"}
+          - {label: "Time (e.g. सुबह 10 बजे)", name: "time", widget: "string"}
+          - {label: "Status", name: "status", widget: "select", options: ["upcoming", "past"], default: "upcoming"}
+          - {label: "Card Color Theme", name: "gradient", widget: "select", options: ["default", "green", "blue", "purple", "orange"], default: "default"}
