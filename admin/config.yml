@@ -15,6 +15,8 @@ collections:
         format: "json"
         description: "Manage your events here"
         fields:
+          - { name: "title", label: "Document Title", widget: "hidden", default: "Events List" }
+          - { label: "Notice Board Text", name: "notice_board", widget: "text", required: false, hint: "ये टेक्स्ट इवेंट पेज पर पीले नोटिस बोर्ड में दिखेगा।" }
           - name: events
             label: "Events List"
             widget: "list"
